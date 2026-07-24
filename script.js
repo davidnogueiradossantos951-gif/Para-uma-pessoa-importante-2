@@ -31,3 +31,19 @@ const musica = document.getElementById("musica");
 document.addEventListener("click", () => {
     musica.play();
 }, { once: true });
+
+function criarCoracao() {
+    const coracao = document.createElement("div");
+    coracao.classList.add("coracao-caindo");
+
+    const coracoes = ["❤️", "💙"];
+    coracao.innerHTML = coracoes[Math.floor(Math.random() * coracoes.length)];
+
+    coracao.style.left = Math.random() * window.innerWidth + "px";
+    coracao.style.top = "-30px";
+    coracao.style.fontSize = (20 + Math.random() * 20) + "px";
+
+    document.body.appendChild(coracao);
+}
+
+setInterval(criarCoracao, 300);
