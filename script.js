@@ -34,16 +34,26 @@ document.addEventListener("click", () => {
 
 function criarCoracao() {
     const coracao = document.createElement("div");
-    coracao.classList.add("coracao-caindo");
 
-    const coracoes = ["❤️", "💙"];
-    coracao.innerHTML = coracoes[Math.floor(Math.random() * coracoes.length)];
+    coracao.innerHTML = Math.random() > 0.5 ? "❤️" : "💙";
 
-    coracao.style.left = Math.random() * window.innerWidth + "px";
-    coracao.style.top = "-30px";
+    coracao.style.position = "fixed";
+    coracao.style.left = Math.random() * 100 + "vw";
+    coracao.style.top = "-40px";
     coracao.style.fontSize = (20 + Math.random() * 20) + "px";
+    coracao.style.pointerEvents = "none";
+    coracao.style.zIndex = "9999";
+    coracao.style.transition = "transform 6s linear";
 
     document.body.appendChild(coracao);
+
+    setTimeout(() => {
+        coracao.style.transform = "translateY(110vh)";
+    }, 10);
+
+    setTimeout(() => {
+        coracao.remove();
+    }, 6000);
 }
 
 setInterval(criarCoracao, 300);
