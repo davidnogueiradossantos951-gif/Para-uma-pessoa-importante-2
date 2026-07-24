@@ -25,3 +25,10 @@ function atualizarContador() {
 
 atualizarContador();
 setInterval(atualizarContador, 1000);
+
+// Música
+const musica = document.getElementById("musica");
+
+document.querySelector(".capa a").addEventListener("click", () => {
+    musica.play();
+});
