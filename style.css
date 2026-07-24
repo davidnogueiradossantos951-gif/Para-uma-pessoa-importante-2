@@ -138,3 +138,18 @@ a:hover {
 .cartinha.aberta .mensagem-escondida {
     display: block;
 }
+.tempo {
+    text-align: center;
+}
+
+#contador {
+    margin-top: 20px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #a33f63;
+    line-height: 1.8;
+    background: #fff7fa;
+    border: 2px solid #e7a1b8;
+    border-radius: 20px;
+    padding: 20px;
+}
