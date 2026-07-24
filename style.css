@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: linear-gradient(135deg, #fff1f5, #ffe4ec, #fff8fa);
+    color: #5b2738;
+    line-height: 1.7;
+}
+
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 35px 25px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 28px;
+    box-shadow: 0 12px 35px rgba(120, 40, 70, 0.12);
+}
+
+.capa {
+    min-height: 100vh;
+    margin: 0;
+    max-width: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.capa h1 {
+    max-width: 800px;
+    font-size: clamp(2.5rem, 9vw, 5rem);
+    line-height: 1.1;
+    color: #9d3d61;
+}
+
+.capa p {
+    font-size: 1.15rem;
+}
+
+.coracao {
+    font-size: 4rem;
+    animation: pulsar 2s infinite;
+}
+
+h2 {
+    color: #a33f63;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #a33f63;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    background: #a33f63;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+a:hover {
+    transform: scale(1.05);
+    background: #8c3153;
+}
+
+.mensagem {
+    margin: 25px 0;
+    padding: 22px;
+    border-radius: 20px;
+    background: #fff7fa;
+    border-left: 5px solid #d889a4;
+}
+
+.final {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Animação do coração */
+@keyframes pulsar {
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* Cartinhas */
+.cartinhas {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.cartinha {
+    background: #fff7fa;
+    border: 2px solid #e7a1b8;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cartinha:hover {
+    transform: scale(1.02);
+}
+
+.envelope {
+    font-size: 4rem;
+}
+
+.mensagem-escondida {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    text-align: left;
+}
+
+/* Quando a cartinha estiver aberta */
+.cartinha.aberta .mensagem-escondida {
+    display: block;
+}
